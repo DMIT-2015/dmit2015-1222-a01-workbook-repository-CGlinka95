@@ -29,17 +29,16 @@ public class CanadianIncomeTaxManager {
     @Getter
     private List<CanadianPersonalIncomeTaxRate> incomeTaxRates;
 
-    public List<String> fetchIncomeTaxData() {
+    public void loadDataFromFile() {
         List<String> incomeTaxData = new ArrayList<>();
         try {
             Path csvPath = Path.of(
                     getClass()
                             .getClassLoader()
                             .getResource("data/CanadianPersonalIncomeTaxRates.csv").toURI());
-            incomeTaxData = Files.readAllLines(csvPath);
+            //incomeTaxRates = Files.readAllLines(csvPath);
         } catch (URISyntaxException | IOException e) {
             throw new RuntimeException(e);
         }
-        return incomeTaxData;
     }
 }
