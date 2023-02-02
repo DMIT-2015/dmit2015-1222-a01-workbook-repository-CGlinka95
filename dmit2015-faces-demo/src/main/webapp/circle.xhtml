@@ -1,0 +1,57 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:faces="jakarta.faces"
+        xmlns:ui="jakarta.faces.facelets"
+        xmlns:f="jakarta.faces.core"
+        xmlns:h="jakarta.faces.html"
+        xmlns:pt="jakarta.faces.passthrough"
+        xmlns:cc="jakarta.faces.composite"
+        xmlns:my="jakarta.faces.component"
+        xmlns:c="jakarta.tags.core"
+        xmlns:fn="jakarta.tags.functions"
+        xmlns:o="http://omnifaces.org/ui"
+        xmlns:of="http://omnifaces.org/functions"
+        xmlns:p="http://primefaces.org/ui"
+        template="/WEB-INF/faces-templates/layout.xhtml"
+>
+
+    <ui:param name="title" value="Circle Calculator"/>
+
+    <ui:define name="maincontent">
+        <h1>Circle Calculator</h1>
+
+        <p:messages id="messages" />
+        <p:growl id="growl" />
+
+        <h:form prependId="false">
+            <div>
+                <p:outputLabel for="@next">Circle Radius</p:outputLabel>
+                <p:inputNumber id="radius"
+                               value="#{currentCircleRequestScopedController.radius}"
+                               minValue="1"
+                />
+            </div>
+            <div>
+                <p:commandButton id="areaButton"
+                                 value="Calculate Area"
+                                 action="#{currentCircleRequestScopedController.calculateArea()}"
+                                 update=":messages :growl"
+                />
+
+                <p:commandButton id="diameterButton"
+                                 value="Calculate Diameter"
+                                 action="#{currentCircleRequestScopedController.calculateDiameter()}"
+                                 update=":messages :growl"
+                />
+
+                <p:commandButton id="circumferenceButton"
+                                 value="Calculate Circumference"
+                                 action="#{currentCircleRequestScopedController.calculateCircumference()}"
+                                 update=":messages :growl"
+                />
+            </div>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>
