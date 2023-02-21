@@ -14,6 +14,10 @@
           <element id="module-output" name="dmit2015-azure-webapp-v2" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.zxing:core:3.5.1" />
+          <element id="library" level="project" name="Maven: com.google.zxing:javase:3.5.1" />
+          <element id="library" level="project" name="Maven: com.beust:jcommander:1.82" />
+          <element id="library" level="project" name="Maven: com.github.jai-imageio:jai-imageio-core:1.4.0" />
           <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:2.0.0" />
           <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:2.0.0" />
           <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:4.0.0" />

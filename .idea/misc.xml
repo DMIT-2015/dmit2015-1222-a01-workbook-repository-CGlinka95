@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/dmit2015-azure-webapp-v2" />
   </component>
@@ -7,6 +8,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/dmit2015-azure-webapp-v2/pom.xml" />
+        <option value="$PROJECT_DIR$/dmit2015-jpa-faces-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/dmit2015-jpa-javase-demo/pom.xml" />
       </list>
     </option>
   </component>
